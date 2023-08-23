@@ -10,7 +10,7 @@ async function getVolunteer() {
   return res.json();
 }
 
-export default async function VolunteerList({ altText }) {
+export default async function VolunteerList({ altText }: VolunteerProps) {
   const volunteertData: Promise<Volunteers[]> = getVolunteer();
   const volunteer = await getVolunteer();
   return (

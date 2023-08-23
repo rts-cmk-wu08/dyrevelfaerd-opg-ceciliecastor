@@ -1,4 +1,5 @@
 import AboutPage from "./About/page";
+import NewsletterPage from "./NewsLetter/page";
 import Banner from "./components/banner";
 import VolunteerPage from "./volunteer/page";
 
@@ -28,7 +29,7 @@ export default async function Home() {
         text="Ring til Dyrenes Vagtcentral på 1812 og få råd til hjælp og håndtering af dyr"
         altText="Pindsvin i hænderne på et menneske"
       />
-      {/* Nyhedsbrev */}
+      <NewsletterPage />
       <Banner
         image={asset.find((item: any) => item.id === 1)?.url || ""}
         heading="Adopter et dyr"

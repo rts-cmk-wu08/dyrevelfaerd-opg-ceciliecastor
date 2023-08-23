@@ -14,7 +14,8 @@ const Banner: React.FC<BannerProps> = ({ heading, text, image, altText }) => {
     w-screen 
     grid 
     grid-rows-1
-    
+    overflow-hidden
+    h-[300px]
     "
     >
       <Image
@@ -26,7 +27,8 @@ const Banner: React.FC<BannerProps> = ({ heading, text, image, altText }) => {
         alt={altText}
         className="
         row-start-1 
-        col-start-1"
+        col-start-1
+        self-center"
       />
       <div
         className="

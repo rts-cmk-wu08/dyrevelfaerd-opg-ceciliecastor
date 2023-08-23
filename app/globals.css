@@ -19,6 +19,12 @@ nav {
   font-light;
 }
 
+.two-col-grid {
+  @apply w-4/5
+  mx-auto py-8
+  grid grid-cols-2 gap-8;
+}
+
 .three-col-grid {
   @apply w-4/5
   mx-auto my-8
@@ -42,7 +48,8 @@ h1 {
 h3 {
   @apply text-2xl
   text-primary
-  uppercase;
+  uppercase
+  mb-4;
 }
 
 h4 {
