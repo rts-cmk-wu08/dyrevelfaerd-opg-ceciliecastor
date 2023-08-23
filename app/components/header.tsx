@@ -4,7 +4,7 @@ import Logo from "./dv-logo.png";
 
 export default function Header() {
   return (
-    <header>
+    <header className="py-2">
       <Link href="/" className="logo">
         <Image
           src={Logo}
@@ -13,7 +13,7 @@ export default function Header() {
           quality={100}
           placeholder="blur"
         />
-        <h1>Foreningen for Dyrevelfærd</h1>
+        <h1 className="text-2xl">Foreningen for Dyrevelfærd</h1>
       </Link>
       <nav>
         <Link href="/dashboard#about">Hjem</Link>

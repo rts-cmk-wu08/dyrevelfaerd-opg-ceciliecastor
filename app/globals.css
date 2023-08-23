@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 header {
-  @apply max-w-5xl
+  @apply w-4/5
   mx-auto my-2
   flex justify-between;
 }
@@ -17,4 +17,37 @@ nav {
 nav {
   @apply text-gray-500
   font-light;
+}
+
+.three-col-grid {
+  @apply w-4/5
+  mx-auto my-8
+  grid grid-cols-3 gap-8;
+}
+
+.three-col-grid h3{
+  @apply
+  col-span-3
+}
+
+p {
+  @apply font-light
+  text-base;
+}
+
+h1 {
+  @apply text-6xl;
+}
+
+h3 {
+  @apply text-2xl
+  text-primary
+  uppercase;
+}
+
+h4 {
+  @apply 
+  text-white
+  text-xl
+  mb-4;
 }
