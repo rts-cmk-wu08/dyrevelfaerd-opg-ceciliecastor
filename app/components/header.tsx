@@ -21,6 +21,7 @@ export default function Header() {
         <Link href="/dashboard#about">Bliv Frivillig</Link>
         <Link href="/dashboard#about">Dyr i nød?</Link>
         <Link href="/dashboard#about">Adopter et dyr</Link>
+        <Link href="/dashboard/login">Login</Link>
       </nav>
     </header>
   );

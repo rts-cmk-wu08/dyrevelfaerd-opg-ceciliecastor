@@ -1,11 +1,3 @@
-//interface AnimalProps {
-//   title: string;
-//   description: string;
-//   img: string;
-//   age: number;
-//   altText: string;
-// }
-
 import Image from "next/image";
 import Link from "next/link";
 

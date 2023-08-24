@@ -22,22 +22,22 @@ nav {
 .two-col-grid {
   @apply w-4/5
   mx-auto py-8
-  grid grid-cols-2 gap-8;
+  grid  grid-cols-1 md:grid-cols-2 gap-8;
 }
 
 .two-col-grid h3 {
   @apply
-  col-span-2
+  md:col-span-2
 }
 
 .three-col-grid {
   @apply w-4/5
   mx-auto my-8
-  grid grid-cols-3 gap-8;
+  grid grid-cols-1 md:grid-cols-3 gap-8;
 }
 
 .three-col-grid h3 {
-  @apply col-span-3;
+  @apply md:col-span-3;
 }
 
 p {
@@ -64,4 +64,16 @@ h4 {
 
 .h4-banner {
   @apply w-2/3;
+}
+
+.footer-link {
+@apply
+font-light
+text-primary
+text-sm
+}
+
+.footer-txt {
+  @apply
+  text-sm
 }
