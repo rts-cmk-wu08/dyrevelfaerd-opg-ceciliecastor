@@ -47,7 +47,7 @@ const Banner: React.FC<BannerProps> = ({ heading, text, image, altText }) => {
         >
           {heading}
         </h1>
-        <h4>{text}</h4>
+        <h4 className="h4-banner">{text}</h4>
       </div>
     </section>
   );

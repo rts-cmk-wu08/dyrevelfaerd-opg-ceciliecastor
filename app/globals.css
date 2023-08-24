@@ -25,15 +25,19 @@ nav {
   grid grid-cols-2 gap-8;
 }
 
+.two-col-grid h3 {
+  @apply
+  col-span-2
+}
+
 .three-col-grid {
   @apply w-4/5
   mx-auto my-8
   grid grid-cols-3 gap-8;
 }
 
-.three-col-grid h3{
-  @apply
-  col-span-3
+.three-col-grid h3 {
+  @apply col-span-3;
 }
 
 p {
@@ -53,8 +57,11 @@ h3 {
 }
 
 h4 {
-  @apply 
-  text-white
+  @apply text-white
   text-xl
   mb-4;
+}
+
+.h4-banner {
+  @apply w-2/3;
 }

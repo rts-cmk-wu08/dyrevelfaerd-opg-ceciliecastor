@@ -1,4 +1,5 @@
 import AboutPage from "./About/page";
+import AnimalCard from "./Animals/page";
 import NewsletterPage from "./NewsLetter/page";
 import Banner from "./components/banner";
 import VolunteerPage from "./volunteer/page";
@@ -36,7 +37,7 @@ export default async function Home() {
         text="Overvejer du et nyt medlem af familien? Måske du er det perfekte match til et af vores mange svigtede internatdyr, som venter på nye kærlige hjem."
         altText="Beagle på en græsplæne i en indhegning"
       />
-      {/* Dyr hos os */}
+      <AnimalCard />
     </main>
   );
 }

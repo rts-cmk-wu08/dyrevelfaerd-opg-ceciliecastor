@@ -20,3 +20,15 @@ type Volunteers = {
     url: string;
   };
 };
+
+type Animals = {
+  id: number;
+  name: string;
+  description: string;
+  age: number;
+  assetId: number;
+  asset: {
+    id: number;
+    url: string;
+  };
+};

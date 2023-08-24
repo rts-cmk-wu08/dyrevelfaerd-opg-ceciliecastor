@@ -19,7 +19,6 @@ export default async function VolunteerList({ altText }: VolunteerProps) {
         <h3>Bliv Frivillig</h3>
         {volunteer.map((data: any) => (
           <div key={data.id} className="bg-white p-4 rounded-md">
-            <h4 className="text-gray-600">{data.title}</h4>
             <Image
               src={data.asset.url}
               width={0}
@@ -28,6 +27,7 @@ export default async function VolunteerList({ altText }: VolunteerProps) {
               alt={altText}
               style={{ width: "100%", height: "auto" }}
             />
+            <h4 className="text-gray-600 mt-4">{data.title}</h4>
             <p className="my-6">{data.content}</p>
             <p className="font-thin italic">{data.extra}</p>
           </div>
