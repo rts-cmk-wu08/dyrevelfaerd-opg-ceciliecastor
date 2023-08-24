@@ -1,5 +1,9 @@
 import VolunteerList from "./volunteerList";
 
 export default function VolunteerPage() {
-  return <VolunteerList />;
+  return (
+    <section id="#volunteer">
+      <VolunteerList />;
+    </section>
+  );
 }
