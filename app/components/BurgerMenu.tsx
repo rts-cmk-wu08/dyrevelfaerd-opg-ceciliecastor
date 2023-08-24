@@ -9,28 +9,28 @@ export default function BurgerMenu() {
     setIsOpen(!isOpen);
   };
   return (
-    <button
-      onClick={handleClick}
-      className="
+    <div className="flex">
+      <button
+        onClick={handleClick}
+        className="
       flex 
       flex-col 
       justify-center 
       items-center
-      visible
-      lg:invisible"
-    >
-      <span
-        className={`
+      lg:hidden"
+      >
+        <span
+          className={`
     bg-primary 
     block 
     transition-all 
     duration-300 
     ease-out 
     h-0.5 w-6 rounded-sm
-    ${isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"}`}
-      ></span>
-      <span
-        className={`
+    ${isOpen ? "rotate-45 translate-y-1" : "-translate-y-1"}`}
+        ></span>
+        <span
+          className={`
     bg-primary 
     block 
     transition-all 
@@ -38,17 +38,18 @@ export default function BurgerMenu() {
     ease-out 
     h-0.5 w-6 rounded-sm
     ${isOpen ? "opacity-0" : "opacity-100"}`}
-      ></span>
-      <span
-        className={`
+        ></span>
+        <span
+          className={`
     bg-primary 
     block 
     transition-all 
     duration-300 
     ease-out 
     h-0.5 w-6 rounded-sm
-    ${isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"}`}
-      ></span>
-    </button>
+    ${isOpen ? "-rotate-45 -translate-y-1" : "translate-y-1"}`}
+        ></span>
+      </button>
+    </div>
   );
 }

@@ -16,13 +16,27 @@ export default function Header() {
         />
         <h1 className="text-2xl">Foreningen for Dyrevelfærd</h1>
       </Link>
-      <nav className="invisible lg:visible">
-        <Link href="/#home">Hjem</Link>
-        <Link href="/#about">Om os</Link>
-        <Link href="/#volunteer">Bliv Frivillig</Link>
-        <Link href="/dashboard#rescue">Dyr i nød?</Link>
-        <Link href="/dashboard#about">Adopter et dyr</Link>
-        <Link href="/dashboard/login">Login</Link>
+      <nav className="desktop-nav">
+        <ul>
+          <li>
+            <Link href="/#home">Hjem</Link>
+          </li>
+          <li>
+            <Link href="/#about">Om os</Link>
+          </li>
+          <li>
+            <Link href="/#volunteer">Bliv Frivillig</Link>
+          </li>
+          <li>
+            <Link href="/dashboard#rescue">Dyr i nød?</Link>
+          </li>
+          <li>
+            <Link href="/dashboard#about">Adopter et dyr</Link>
+          </li>
+          <li>
+            <Link href="/dashboard/login">Login</Link>
+          </li>
+        </ul>
       </nav>
       <BurgerMenu />
     </header>

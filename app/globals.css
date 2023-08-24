@@ -19,6 +19,19 @@ nav {
   font-light;
 }
 
+.desktop-nav ul{
+  @apply
+  hidden
+  lg:flex
+  lg:gap-8
+  lg:justify-end
+}
+
+.mobile-nav{
+  @apply
+  lg:hidden
+}
+
 .two-col-grid {
   @apply w-4/5
   mx-auto py-8
