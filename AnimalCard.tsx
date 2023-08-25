@@ -1,16 +1,8 @@
-//interface AnimalProps {
-//   title: string;
-//   description: string;
-//   img: string;
-//   age: number;
-//   altText: string;
-// }
-
 import Image from "next/image";
 import Link from "next/link";
 
 async function getAnimals() {
-  const res = await fetch("http://localhost:4000/api/v1/animals");
+  const res = await fetch("http://localhost:4000/api/v1/animals/");
 
   return res.json();
 }

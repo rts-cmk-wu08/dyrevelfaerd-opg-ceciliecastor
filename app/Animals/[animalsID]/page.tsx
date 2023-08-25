@@ -6,12 +6,6 @@ type Params = {
   };
 };
 
-// async function getAnimals() {
-//   const res = await fetch("http://localhost:4000/api/v1/animals");
-
-//   return res.json();
-// }
-
 async function getAnimalsDetails(animalsID: number) {
   const res = await fetch(`http://localhost:4000/api/v1/animals/${animalsID}`);
 
@@ -25,8 +19,17 @@ export default async function AnimalDetails({ params: { animalsID } }: Params) {
   const animal = await animalDetails;
 
   return (
-    <section>
-      <h1>{animal.name}</h1>
+    <section
+      className="
+        w-1/2
+        mx-auto 
+        my-16
+        p-8
+        border-2
+        rounded-md
+        border-secondary
+    "
+    >
       <Image
         src={animal.asset.url}
         width={0}
@@ -37,6 +40,21 @@ export default async function AnimalDetails({ params: { animalsID } }: Params) {
         className={`
             overflow-hidden`}
       ></Image>
+      <h1
+        className="
+        mb-8
+        text-primary
+        text-3xl
+        mt-8
+      "
+      >
+        {animal.name}
+      </h1>
+      <p>{animal.description}</p>
+      <div className="my-8 grid grid-cols-2">
+        <h3>Alder {animal.age}</h3>
+        <button className="basic-button justify-self-end">Adopter mig</button>
+      </div>
     </section>
   );
 }

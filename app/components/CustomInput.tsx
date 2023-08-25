@@ -23,11 +23,12 @@ const CustomInput: React.FC<LabelProps> = ({ name, border, ...props }) => {
       p-2
       text-xs
       font-extralight
+      w-full
       ${border ? "border-0" : "border-2"}
       ${meta.touched && meta.error ? "" : ""}
       `}
       />
-      {meta.touched && meta.error && <p className="">{meta.error}</p>}
+      {meta.touched && meta.error && <p className="error">{meta.error}</p>}
     </section>
   );
 };

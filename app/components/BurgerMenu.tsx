@@ -17,7 +17,9 @@ export default function BurgerMenu() {
       flex-col 
       justify-center 
       items-center
-      lg:hidden"
+      lg:hidden
+      bg-white
+      border-0"
       >
         <span
           className={`

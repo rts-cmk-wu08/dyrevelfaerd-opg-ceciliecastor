@@ -1,5 +1,5 @@
 import AboutPage from "./About/page";
-import AnimalCard from "./Animals/page";
+import AnimalCard from "./animals/page";
 import NewsletterPage from "./NewsLetter/page";
 import Banner from "./components/banner";
 import VolunteerPage from "./volunteer/page";

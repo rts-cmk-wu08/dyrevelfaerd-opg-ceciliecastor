@@ -1,14 +1,31 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
-async function getAnimals() {
-  const res = await fetch("http://localhost:4000/api/v1/animals");
+async function getAnimals(page: number = 1) {
+  const limit = 8;
+  const start = (page - 1) * limit;
+  const res = await fetch(
+    "http://localhost:4000/api/v1/animals?_start=${start}&_limit=${limit}"
+  );
 
   return res.json();
 }
 
-export default async function AnimalCard() {
-  const animals = await getAnimals();
+export default function AnimalCard() {
+  const [animals, setAnimals] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  //const animals = await getAnimals();
+
+  useEffect(() => {
+    // Create an IIFE (Immediately Invoked Function Expression) to use async within useEffect
+    (async () => {
+      const fetchedAnimals = await getAnimals(currentPage);
+      setAnimals(fetchedAnimals);
+    })();
+  }, [currentPage]);
 
   return (
     <section className="two-col-grid">
@@ -37,6 +54,20 @@ export default async function AnimalCard() {
           </div>
         </Link>
       ))}
+      <div>
+        <button
+          onClick={() => setCurrentPage(currentPage - 1)}
+          disabled={currentPage === 1}
+        >
+          Previous
+        </button>
+        <button
+          onClick={() => setCurrentPage(currentPage + 1)}
+          disabled={animals.length < 8}
+        >
+          Next
+        </button>
+      </div>
     </section>
   );
 }

@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 header {
   @apply w-4/5
   mx-auto my-2
@@ -19,17 +20,15 @@ nav {
   font-light;
 }
 
-.desktop-nav ul{
-  @apply
-  hidden
+.desktop-nav ul {
+  @apply hidden
   lg:flex
   lg:gap-8
-  lg:justify-end
+  lg:justify-end;
 }
 
-.mobile-nav{
-  @apply
-  lg:hidden
+.mobile-nav {
+  @apply lg:hidden;
 }
 
 .two-col-grid {
@@ -39,8 +38,7 @@ nav {
 }
 
 .two-col-grid h3 {
-  @apply
-  md:col-span-2
+  @apply md:col-span-2;
 }
 
 .three-col-grid {
@@ -79,14 +77,38 @@ h4 {
   @apply w-2/3;
 }
 
+.error {
+  @apply text-red-700
+  text-sm
+  pl-1;
+}
+
+/* ---- BUTTON ---- */
+.basic-button {
+  @apply px-3 py-2
+  rounded-md 
+  bg-contrast
+  border-2
+  border-contrast
+  text-white
+  text-base;
+}
+
+.basic-button:hover {
+  @apply bg-white
+  border-2
+  border-contrast
+  text-contrast;
+}
+
+/* ---- FOOTER ---- */
+
 .footer-link {
-@apply
-font-light
+  @apply font-light
 text-primary
-text-sm
+text-sm;
 }
 
 .footer-txt {
-  @apply
-  text-sm
+  @apply text-sm;
 }
