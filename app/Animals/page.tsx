@@ -28,7 +28,7 @@ export default function AnimalCard() {
   }, [currentPage]);
 
   return (
-    <section className="two-col-grid">
+    <section id="animals" className="two-col-grid">
       <h3>Dyr hos os</h3>
       {animals.map((data: any) => (
         <Link href={`/animals/${data.id}`}>

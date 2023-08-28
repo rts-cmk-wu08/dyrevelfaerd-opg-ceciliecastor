@@ -3,6 +3,7 @@ import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import UnsubscribePopup from "../components/unsubscribePopUp";
 
 interface SubmitProps {
   email: string;
@@ -25,15 +26,43 @@ const LoginSchema = Yup.object({
 export default function NewsletterForm() {
   const router = useRouter();
 
-  const [emailExist, setEmailExist] = useState(false);
+  //const [emailExist, setEmailExist] = useState(false);
+  const [popup, setPopup] = useState<string | null>(null);
 
   return (
     <Formik
       initialValues={InitialValues}
       validationSchema={LoginSchema}
-      onSubmit={(values, action) => {
-        console.log(values);
-        //poast request til api
+      onSubmit={async (values, action) => {
+        try {
+          const res = await fetch(
+            `http://localhost:4000/api/v1/subscribers/${values.email}`
+          );
+          if (res.status === 200) {
+            setPopup("You're already subscribed");
+            action.setSubmitting(false);
+            return;
+          } else if (res.status !== 404) {
+            console.error("Error checking email:", await res.text());
+            action.setSubmitting(false);
+            return;
+          }
+          const addResponse = await fetch(
+            "http://localhost:4000/api/v1/subscribers",
+            {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(values),
+            }
+          );
+          if (addResponse.ok) {
+            setPopup("You're now subscribed");
+          } else {
+            console.error("Error subscribing:", await addResponse.text());
+          }
+        } catch (error) {
+          console.error("Error:", error);
+        }
         action.setSubmitting(false);
       }}
     >
@@ -41,14 +70,15 @@ export default function NewsletterForm() {
         method="POST"
         className="
       grid grid-cols-1 
-      gap-4 lg:grid-cols-2"
+      gap-4 pl-8"
       >
+        {popup && <p>{popup}</p>}
         <CustomInput name="email" type="email" placeholder="Email" />
-        <CustomInput name="name" type="email" placeholder="Navn" />
+        <CustomInput name="name" type="text" placeholder="Navn" />
         <button
           className="basic-button
           justify-self-end
-          lg:col-span-2
+          
           "
         >
           Tildmeld

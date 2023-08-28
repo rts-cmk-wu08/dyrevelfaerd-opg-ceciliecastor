@@ -6,4 +6,7 @@ module.exports = {
     domains: ["localhost"],
   },
   nextConfig,
+  experimental: {
+    serverActions: true,
+  },
 };

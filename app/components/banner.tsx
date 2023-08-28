@@ -5,9 +5,16 @@ interface BannerProps {
   text: string;
   image: string;
   altText: string;
+  id: string;
 }
 
-const Banner: React.FC<BannerProps> = ({ heading, text, image, altText }) => {
+const Banner: React.FC<BannerProps> = ({
+  heading,
+  text,
+  image,
+  altText,
+  id,
+}) => {
   return (
     <section
       className="
@@ -15,7 +22,8 @@ const Banner: React.FC<BannerProps> = ({ heading, text, image, altText }) => {
     grid 
     grid-rows-1
     overflow-hidden
-    h-[300px]
+    h-auto
+    md:h-[300px]
     "
     >
       <Image
@@ -25,6 +33,7 @@ const Banner: React.FC<BannerProps> = ({ heading, text, image, altText }) => {
         sizes="100vw"
         style={{ width: "100%", height: "auto" }}
         alt={altText}
+        id={id}
         className="
         row-start-1 
         col-start-1
@@ -34,7 +43,8 @@ const Banner: React.FC<BannerProps> = ({ heading, text, image, altText }) => {
         className="
           row-start-1 
           col-start-1
-          pt-8
+          pt-6
+          md:pt-8
           w-4/5
           mx-auto"
       >

@@ -21,6 +21,7 @@ export default async function Home() {
         heading="Foreningen for Dyrevelfærd"
         text="Vi specialisere os i dyrevelfærd"
         altText="Nuttede kattekillinger fra Foreningen for Dyrevelfærds internat"
+        id="cover"
       />
       <AboutPage />
       <VolunteerPage />
@@ -29,6 +30,7 @@ export default async function Home() {
         heading="Står du med et dyr i nød?"
         text="Ring til Dyrenes Vagtcentral på 1812 og få råd til hjælp og håndtering af dyr"
         altText="Pindsvin i hænderne på et menneske"
+        id="rescue"
       />
       <NewsletterPage />
       <Banner
@@ -36,6 +38,7 @@ export default async function Home() {
         heading="Adopter et dyr"
         text="Overvejer du et nyt medlem af familien? Måske du er det perfekte match til et af vores mange svigtede internatdyr, som venter på nye kærlige hjem."
         altText="Beagle på en græsplæne i en indhegning"
+        id="adopt"
       />
       <AnimalCard />
     </main>

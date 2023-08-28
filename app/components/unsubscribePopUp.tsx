@@ -27,7 +27,7 @@ export default function UnsubscribePopup() {
     "
       >
         {/* Unsubscribe form */}
-        <h3>Unsubscribe</h3>
+        <h3>{}</h3>
       </div>
     </section>
   );

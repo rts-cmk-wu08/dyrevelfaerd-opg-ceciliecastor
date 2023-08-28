@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
+/* ---- HEADER ---- */
 header {
   @apply w-4/5
   mx-auto my-2
@@ -31,6 +31,13 @@ nav {
   @apply lg:hidden;
 }
 
+/* ---- SECTIONS ---- */
+.main-section{
+  @apply w-4/5
+  mx-auto; 
+}
+
+/* ---- GRIDS ---- */
 .two-col-grid {
   @apply w-4/5
   mx-auto py-8
@@ -51,13 +58,17 @@ nav {
   @apply md:col-span-3;
 }
 
+/* ---- TYPOGRAPHY ---- */
 p {
   @apply font-light
   text-base;
 }
 
 h1 {
-  @apply text-6xl;
+  @apply 
+  text-xl
+  md:text-5xl
+  lg:text-6xl;
 }
 
 h3 {
@@ -68,8 +79,10 @@ h3 {
 }
 
 h4 {
-  @apply text-white
-  text-xl
+  @apply 
+  text-white
+  text-base
+  md:text-xl
   mb-4;
 }
 
