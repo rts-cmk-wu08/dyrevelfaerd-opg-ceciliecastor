@@ -30,19 +30,19 @@ export default function Header() {
         >
           <ul>
             <li>
-              <Link href="/#home">Hjem</Link>
+              <Link href="#home">Hjem</Link>
             </li>
             <li>
-              <Link href="/#about">Om os</Link>
+              <Link href="#about">Om os</Link>
             </li>
             <li>
-              <Link href="/#volunteer">Bliv Frivillig</Link>
+              <Link href="#volunteer">Bliv Frivillig</Link>
             </li>
             <li>
               <Link href="#rescue">Dyr i nød?</Link>
             </li>
             <li>
-              <Link href="#adopt">Adopter et dyr</Link>
+              <Link href="#animals">Adopter et dyr</Link>
             </li>
             <li>
               <Link href="/login">Login</Link>

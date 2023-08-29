@@ -9,11 +9,10 @@ async function getVolunteer() {
 export default async function VolunteerList() {
   const volunteertData: Promise<Volunteers[]> = getVolunteer();
   const volunteer = await getVolunteer();
-
   return (
     <section id="volunteer" className="bg-secondary py-6">
       <section className="three-col-grid">
-        <h1 className="section-h1">Bliv Frivillig</h1>
+        <h3>Bliv Frivillig</h3>
         {volunteer.map((data: any) => (
           <div key={data.id} className="bg-white p-4 rounded-md">
             <Image

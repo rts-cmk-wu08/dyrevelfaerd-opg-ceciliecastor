@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 type Params = {
   params: {
@@ -13,7 +14,6 @@ async function getAnimalsDetails(animalsID: number) {
 
   return res.json();
 }
-
 export default async function AnimalDetails({ params: { animalsID } }: Params) {
   const animalDetails: Promise<Animals> = getAnimalsDetails(animalsID);
   const animal = await animalDetails;
@@ -53,7 +53,9 @@ export default async function AnimalDetails({ params: { animalsID } }: Params) {
       <p>{animal.description}</p>
       <div className="my-8 grid grid-cols-2">
         <h3>Alder {animal.age}</h3>
-        <button className="basic-button justify-self-end">Adopter mig</button>
+        <Link href={`${animalsID}/contact`} className="justify-self-end">
+          <button className="basic-button">Adopter mig</button>
+        </Link>
       </div>
     </section>
   );

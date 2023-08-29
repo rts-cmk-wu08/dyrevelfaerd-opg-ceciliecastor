@@ -29,7 +29,7 @@ export default function AnimalCard() {
 
   return (
     <section id="animals" className="two-col-grid">
-      <h3>Dyr hos os</h3>
+      <h1 className="section-h1 md:col-span-2">Dyr hos os</h1>
       {animals.map((data: any) => (
         <Link href={`/animals/${data.id}`}>
           <div
@@ -54,20 +54,6 @@ export default function AnimalCard() {
           </div>
         </Link>
       ))}
-      <div>
-        <button
-          onClick={() => setCurrentPage(currentPage - 1)}
-          disabled={currentPage === 1}
-        >
-          Previous
-        </button>
-        <button
-          onClick={() => setCurrentPage(currentPage + 1)}
-          disabled={animals.length < 8}
-        >
-          Next
-        </button>
-      </div>
     </section>
   );
 }

@@ -54,10 +54,6 @@ nav {
   grid grid-cols-1 md:grid-cols-3 gap-8;
 }
 
-.three-col-grid h3 {
-  @apply md:col-span-3;
-}
-
 /* ---- TYPOGRAPHY ---- */
 p {
   @apply font-light
@@ -69,6 +65,16 @@ h1 {
   text-xl
   md:text-5xl
   lg:text-6xl;
+}
+
+.section-h1{
+  @apply text-2xl
+  md:text-5xl
+  text-primary
+  uppercase
+  md:col-span-3
+  mb-4
+  py-4;
 }
 
 h3 {
