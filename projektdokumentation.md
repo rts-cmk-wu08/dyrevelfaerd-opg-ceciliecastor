@@ -27,8 +27,7 @@ Adgangskode:
     Typescript (TS) er en udvidelse af JS, eller et ‘superset of JavaScript’. TS bygger oven på den struktur og funktionalitet man kender fra, men tilføjer flere ekstra lag som
 
     1.4 Formik & Yup
-    Formik er et form bibliotek til React.
-    Yop er en valideringpakke, der validerer på
+    Formik er et form bibliotek til React, der sammen med Yup nemt sørger for, at ens form er korrekt sat op og valideret. Yup fungere til de fleste frameworks, hvor Formik er lavet specifikt til React.
 
 6.  Hvilke udfordringer har jeg mødt på min vej?
     Jeg kunne ikke få mine GET og POST request til at virke på hverken nyhedsbrevet eller login siden. Jeg har brugt en del tid på at afprøve forskellige metoder og fejlsøge, uden held. Det har været enormt frustrerende.
